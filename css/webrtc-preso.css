@@ -5,6 +5,7 @@
   background: #F6F7FE;
   background: -webkit-linear-gradient(top, #F6F7FE 0%, #D9DFFC 100%);
   padding: 0;
+  width: 80%;
 }
 .deck-container > .slide {
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
@@ -195,6 +196,7 @@
   top: 0;
 }
 
+/* Custom stuff */
 .deck-container li cite {
 	font-style: italic;
 }
@@ -203,6 +205,9 @@
 .hide-on-next + .slide.deck-next,
 .hide-on-next + .slide.deck-after {
 	display: none;
+}
+.deck-container .deck-before.deck-child-current .hide-when-before {
+  display: none;
 }
 .deck-container ul {
 	font-size: 1.3em;
@@ -214,15 +219,50 @@
 .deck-container li.github {
 	list-style-image: url(../img/gravatar.jpg);
 }
-.img-header h2 span {
-	background-position: 0 0;
-	background-repeat: no-repeat;
-	display: inline-block;
-	text-indent: -999em;
+.deck-container small {
+  font-size: 75%;
 }
-.deck-container .deck-before.deck-child-current .hide-when-before {
-	display: none;
+.deck-container .big {
+  font-size: 150%;
+}
+.deck-container .huge {
+  font-size: 250%;
 }
 #not-quite-the-end p {
 	margin-bottom: .5em;
+}
+.flow {
+  text-align: center;
+}
+.flow .item, .flow .arrow {
+  display: block;
+}
+.flow .item {
+  height: 47px;
+}
+.flow .item span {
+  background: #fff;
+  border: 1px solid #7ad;
+  border-radius: 5px;
+  display: inline-block;
+  height: 25px;
+  padding: 10px 20px;
+}
+.flow .arrow {
+  background: #7ad;
+  height: 30px;
+  margin: 0 auto 20px;
+  position: relative;
+  width: 20px;
+}
+.flow .arrow:after {
+  border: 20px solid transparent;
+  border-bottom-width: 0;
+  border-top-color: #7ad;
+  content: '';
+  height: 0;
+  left: -10px;
+  position: absolute;
+  top: 30px;
+  width: 0;
 }
