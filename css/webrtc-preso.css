@@ -10,9 +10,6 @@
 .deck-container > .slide {
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
 }
-.deck-container > .slide text {
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-}
 .deck-container pre, .deck-container code, .deck-container kbd, .deck-container samp {
   font-family: Consolas, monospace, sans-serif;
 }
@@ -20,26 +17,29 @@
   font-family: Constantia, Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
 }
 .deck-container h1 {
-  color: #2A0A71;
+  color: #0E58B9;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
 }
 .deck-container h1 span {
-  color: #7B94C6;
   display: block;
   font-size: .6em;
   margin-top: .5em;
-  visibility: hidden;
 }
 .deck-container h2 {
   color: #0E58B9;
   border-bottom: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
+/*
 .cssreflections .deck-container h2 {
   line-height: 1;
   -webkit-box-reflect: below -0.556em -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.3, transparent), color-stop(0.7, rgba(255, 255, 255, 0.1)), to(transparent));
   -moz-box-reflect: below -0.556em -moz-linear-gradient(top, transparent 0%, transparent 30%, rgba(255, 255, 255, 0.3) 100%);
 }
+*/
 .deck-container h3 {
   color: #000;
+  margin-top: 30px;
 }
 .deck-container pre {
   border-color: #cde;
@@ -228,9 +228,55 @@
 .deck-container .huge {
   font-size: 250%;
 }
+.deck-container img.right {
+  float: right;
+}
 #not-quite-the-end p {
 	margin-bottom: .5em;
 }
+
+ul.content {
+  list-style: none;
+}
+ul.content li {
+  position: relative;
+}
+ul.content li:before {
+  position: absolute;
+  left: -1.5em;
+}
+ul.content li.yes:before {
+  content: '✔';
+  color: #090;
+}
+ul.content li.no:before {
+  content: '✖';
+  color: #c00;
+}
+
+.support td {
+  padding: 5px;
+  text-align: center;
+}
+.support .feature {
+  font-weight: bold;
+  text-align: left;
+}
+.support .yes {
+  background: #BBE0BB;
+}
+.support .sortof {
+  background: #E6E6BA;
+}
+.support .no {
+  background: #DFADAD;
+}
+.support .no:before {
+  content: '✖';
+  color: #444;
+  margin: 0 5px;
+}
+
 .flow {
   text-align: center;
 }
